@@ -1,0 +1,27 @@
+let canvas;
+let ctx;
+
+
+let incrementor = 0;
+let speed = 5;
+let alright = 750; 
+window.onload = function () {
+  canvas = document.getElementById("creativeCoding");
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+  ctx = canvas.getContext("2d");
+  setInterval(drawBoxxy, 50);
+};
+
+function drawBoxxy() {
+  incrementor = incrementor + speed;
+  alright = alright - speed;
+ 
+
+  ctx.fillStyle = "black";
+  ctx.fillRect(0, 0, window.innerWidth, window.innerHeight);
+
+
+
+
+  ctx.fillStyle = "green";
